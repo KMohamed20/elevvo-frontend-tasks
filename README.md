@@ -33,7 +33,7 @@ Bienvenue dans le projet complet des tâches de stage front-end pour Elevvo ! Ce
 - Boutons d'ajout au panier
 
 ### ✅ Tâche 4 – Dashboard Analytics Interactif
-**Technologie** : HTML, CSS, JavaScript, Canvas API
+**Technologie** : HTML, CSS, JavaScript, Canvas API, SVG
 - Sidebar de navigation avec menu actif
 - Statistiques animées avec compteurs
 - Graphique linéaire dessiné sur Canvas
@@ -139,6 +139,10 @@ cd elevvo-frontend-tasks
 # Ouvrir chaque fichier HTML dans le navigateur
 open task1-sidebar.html
 open task2-contact-form.html
+open task3-product-cards.html
+open task4-dashboard.html
+open task5-image-slider.html
+open task6-advanced-modal.html
 ```
 
 ### Méthode 2 : Serveur Local (Recommandé)
@@ -175,7 +179,7 @@ npx http-server
 - Navigation clavier
 - Contrastes appropriés
 - Structure sémantique
-- ARIA labels (à améliorer)
+- ARIA labels (améliorables)
 
 ---
 
@@ -189,7 +193,7 @@ class AdvancedSlider {
         this.currentSlide = 0;
         this.init();
     }
-    
+
     init() {
         this.bindEvents();
         this.startAutoPlay();
@@ -240,10 +244,10 @@ class AdvancedSlider {
 
 ---
 
-## 👨‍💻 Auteur
+## 👨‍💼 Auteur
 **Khalid Ag Mohamed Aly**  
 Stagiaire Front-End @ Elevvo  
-📅 Août 2025
+🗓️ Août 2025
 
 ---
 
@@ -282,4 +286,4 @@ Stagiaire Front-End @ Elevvo
 | Tâche 5     | ⭐⭐⭐⭐       | 6-7h         | OOP, Touch Events         |
 | Tâche 6     | ⭐⭐⭐⭐⭐      | 8-9h         | Modular JS, LocalStorage  |
 
-⏱️ **Total estimé** : ~35-40 heures de développement
+🕟️ **Total estimé** : ~35-40 heures de développement
