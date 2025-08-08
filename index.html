@@ -4,77 +4,184 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elevvo Frontend Internship</title>
-  <link rel="stylesheet" href="assets/css/index.css" />
-  <!-- Google Fonts: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Lucide Icons via CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 12px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .tasks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .task-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .task-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .task-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #ff6b6b;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .task-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .task-card p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 16px;
+    }
+
+    .difficulty {
+      font-size: 0.85rem;
+      background: rgba(0,0,0,0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 20px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <div class="logo">
-        <i data-lucide="rocket"></i>
-        <h1>Elevvo Internship</h1>
-      </div>
-      <p class="subtitle">6 Tâches Front-End Avancées en Vanilla JS</p>
+    <header>
+      <h1>🚀 Elevvo Frontend Internship</h1>
+      <p>6 tâches avancées en HTML, CSS et JavaScript – sans framework</p>
     </header>
 
     <main class="tasks-grid">
-      <!-- Task 1 -->
+      <!-- Tâche 1 -->
       <a href="task1-sidebar.html" class="task-card" target="_blank">
-        <div class="icon"><i data-lucide="sidebar"></i></div>
-        <h3>Tâche 1 – Sidebar Responsive</h3>
-        <p>Barre latérale collapsible avec animation fluide et bouton hamburger.</p>
+        <div class="task-number">1</div>
+        <h3>Sidebar Responsive</h3>
+        <p>Barre latérale collapsible avec animation et bouton hamburger</p>
+        <span class="difficulty">Animation • Mobile</span>
       </a>
 
-      <!-- Task 2 -->
+      <!-- Tâche 2 -->
       <a href="task2-contact-form.html" class="task-card" target="_blank">
-        <div class="icon"><i data-lucide="mail"></i></div>
-        <h3>Tâche 2 – Formulaire de Contact</h3>
-        <p>Validation en temps réel, messages d’erreur et design moderne.</p>
+        <div class="task-number">2</div>
+        <h3>Formulaire de Contact</h3>
+        <p>Validation en temps réel, messages d’erreur et UX fluide</p>
+        <span class="difficulty">Validation • UX</span>
       </a>
 
-      <!-- Task 3 -->
+      <!-- Tâche 3 -->
       <a href="task3-product-cards.html" class="task-card" target="_blank">
-        <div class="icon"><i data-lucide="shopping-bag"></i></div>
-        <h3>Tâche 3 – Cartes Produits</h3>
-        <p>Grille interactive avec recherche, filtre et étoiles de notation.</p>
+        <div class="task-number">3</div>
+        <h3>Grille de Produits</h3>
+        <p>Filtres, recherche, étoiles interactives et panier</p>
+        <span class="difficulty">Filtre • Recherche</span>
       </a>
 
-      <!-- Task 4 -->
+      <!-- Tâche 4 -->
       <a href="task4-dashboard.html" class="task-card" target="_blank">
-        <div class="icon"><i data-lucide="bar-chart-2"></i></div>
-        <h3>Tâche 4 – Dashboard Analytics</h3>
-        <p>Graphiques Canvas & SVG, statistiques animées et sélecteur de période.</p>
+        <div class="task-number">4</div>
+        <h3>Dashboard Analytics</h3>
+        <p>Graphiques Canvas & SVG, stats animées, design pro</p>
+        <span class="difficulty">Canvas • SVG • Data</span>
       </a>
 
-      <!-- Task 5 -->
+      <!-- Tâche 5 -->
       <a href="task5-image-slider.html" class="task-card" target="_blank">
-        <div class="icon"><i data-lucide="image"></i></div>
-        <h3>Tâche 5 – Slider d'Images</h3>
-        <p>Slider POO avec navigation tactile, clavier et barre de progression.</p>
+        <div class="task-number">5</div>
+        <h3>Slider d'Images</h3>
+        <p>POO, navigation tactile, clavier, autoplay, progression</p>
+        <span class="difficulty">OOP • Touch • Keyboard</span>
       </a>
 
-      <!-- Task 6 -->
+      <!-- Tâche 6 -->
       <a href="task6-advanced-modal.html" class="task-card" target="_blank">
-        <div class="icon"><i data-lucide="box"></i></div>
-        <h3>Tâche 6 – Modales Avancées</h3>
-        <p>6 types de modales, localStorage, fermeture par ESC ou clic extérieur.</p>
+        <div class="task-number">6</div>
+        <h3>Modales Avancées</h3>
+        <p>6 types, localStorage, fermeture par ESC, architecture modulaire</p>
+        <span class="difficulty">Modular • LocalStorage</span>
       </a>
     </main>
 
-    <footer class="footer">
-      <p>🚀 Développé par <strong>Khalid Ag Mohamed Aly</strong> – Stagiaire Front-End @ <a href="https://elevvo.tech" target="_blank">Elevvo</a></p>
+    <footer>
+      <p>Développé par <strong>Khalid Ag Mohamed Aly</strong> – Stagiaire Front-End @ <a href="https://elevvo.tech" target="_blank">Elevvo</a></p>
       <p>📧 <a href="mailto:elevvopaths@gmail.com">elevvopaths@gmail.com</a> | 📍 Le Caire, Égypte</p>
     </footer>
   </div>
-
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-  </script>
 </body>
 </html>
